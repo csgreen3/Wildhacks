@@ -8,6 +8,8 @@
         Sonar: {},
         Servo : Number,
         Position: {},
+        Speed: Number,
+        CarAngle: Number,
         Timestamp: Date        
     }, 
     { collection : 'Tower' }

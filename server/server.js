@@ -87,7 +87,7 @@ var generateTimer;
 if (!debugMode) towerTimer = setInterval(collectTowerData,1000);
 if (generateMode) generateTimer = setInterval(generateData,300);
 
-var body_ff = {"Sonar":{"left" : 5, "right" : 7 }, "Servo" : 90, "Position" : { "x" : 1, "z" : 1  } };
+var body_ff = {"Sonar":{"left" : 5, "right" : 7 }, "Servo" : 90, "Position" : { "x" : 1, "z" : 1  }, "Speed": 100, "CarAngle" : 45 };
 
 function generateData() {
     body_ff.Sonar.left += (Math.random() -  Math.random()) * 1.5;
@@ -101,11 +101,15 @@ function generateData() {
         if (body_ff.Servo < 0) body_ff.Servo = 360;
         if (body_ff.Servo > 360) body_ff.Servo = 0;    
     body_ff.Position.x += (Math.random() -  Math.random()) * 1.0;    
-        if (body_ff.Position.x < 0) body_ff.Position.x = 0;
-        if (body_ff.Position.x > 360) body_ff.Position.x = 360;
+        if (body_ff.Position.x < -4) body_ff.Position.x = -4;
+        if (body_ff.Position.x > 4) body_ff.Position.x = 4;
     body_ff.Position.z += (Math.random() -  Math.random()) * 1.0;    
-        if (body_ff.Position.z < -16) body_ff.Position.z = -16;
-        if (body_ff.Position.z > 16) body_ff.Position.z = 16;    
+        if (body_ff.Position.z < -4) body_ff.Position.z = -4;
+        if (body_ff.Position.z > 4) body_ff.Position.z = 4;    
+     body_ff.Speed += (Math.random() -  Math.random()) * 5.0;    
+        if (body_ff.Speed < 0) body_ff.Speed = 0;
+        if (body_ff.Speed > 250) body_ff.Speed = 250;    
+    body_ff.CarAngle     = 45; 
     saveTowerData(body_ff);    
 }
 
@@ -189,7 +193,7 @@ function saveTowerData(body){
 
 
 //-------------------------HTTP Server Config-----------------------------//
-server.listen(8000); //Port to listen on
+server.listen(6500); //Port to listen on
 server.on('listening', onListening);
 
 function onListening() {

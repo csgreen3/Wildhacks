@@ -1,30 +1,27 @@
-<h3 class="title">Left Sensor</h3>
+<h3 class="title">Tower Left Sensor</h3>
 <canvas id="towerCanvas_SonarL" class="viewport" style="width:98vw; height:18vh; border:1px solid #000;"> </canvas>
-<h3 class="title">Right Sensor</h3>
+<h3 class="title">Tower Right Sensor</h3>
 <canvas id="towerCanvas_SonarR" class="viewport" style="width:98vw; height:18vh; border:1px solid #000;"> </canvas>
+<h3 class="title">Car Speed</h3>
+<canvas id="towerCanvas_Speed" class="viewport" style="width:98vw; height:18vh; border:1px solid #000;"> </canvas>
 
 <div class="container-fluid">
 <div style="text-align:center" class="row">
-    <div class="col-md-4 col-sm-6">
-        <h3 class="title"> Servo</h3>       
+    <div class="col-md-4 col-sm-6 col-xs-12">
+        <h3 class="title">Tower Direction</h3>       
         <canvas id="towerCanvas_Servo" width="250" height="250" class="viewport" style="border:1px solid #000; border-radius: 150px;"> </canvas>
     </div>
 
-    <div class="col-md-4 col-sm-6">
-         <h3 class="title"> Position</h3>       
+    <div class="col-md-4 col-sm-6 col-xs-12">
+         <h3 class="title">Car Position</h3>       
         <canvas id="towerCanvas_Pos" width="250" height="250" class="viewport" style="border:1px solid #000; border-radius: 150px;"> </canvas>
     </div>
     
-    <div class="col-md-4 col-sm-12">
-        <div  style="text-align: center; width:100%">
-            <div class="buttonBox vertButton" ng-click="forward()" style="padding-top: 7px;">&#8593;</div><!-- Up -->
-            <div style="display: inline-flex;">
-                <div class="buttonBox horButton" ng-click="left()" style="margin-right:25px;">&#8592;</div><!-- Left -->    
-                <div class="buttonBox horButton" ng-click="right()">&#8594;</div><!-- Right -->    
-            </div>
-            <div class="buttonBox vertButton" ng-click="reverse()" style="padding-bottom: 7px;">&#8595;</div><!-- Down -->    
-        </div>
+    <div class="col-md-4 col-sm-6 col-xs-12">
+         <h3 class="title">Car Direction</h3>       
+        <canvas id="towerCanvas_CarAngle" width="250" height="250" class="viewport" style="border:1px solid #000; border-radius: 150px;"> </canvas>
     </div>
-    
+        
 </div>
 </div>
+

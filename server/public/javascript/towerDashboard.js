@@ -1,7 +1,6 @@
 app.controller('TowerDashboardController', [ '$scope', '$http', '$rootScope', '$location', 'Tower', function($scope, $http, $rootScope, $location, Tower) {
     
     Tower.updateData();    
-    
     var DEG_TO_RAD = Math.PI / 180; 
 
     //Calls to canvas to get as variables
@@ -13,23 +12,34 @@ app.controller('TowerDashboardController', [ '$scope', '$http', '$rootScope', '$
     var context_servo = canvas_servo.getContext('2d');    
     var canvas_pos = document.getElementById('towerCanvas_Pos');
     var context_pos = canvas_pos.getContext('2d');
+    var canvas_speed = document.getElementById('towerCanvas_Speed');
+    var context_speed = canvas_speed.getContext('2d');    
+    var canvas_carAngle = document.getElementById('towerCanvas_CarAngle');
+    var context_carAngle = canvas_carAngle.getContext('2d');
         
     
     var sonar_width_offset = canvas_sonarR.width/100;
     var sonar_height_offset = canvas_sonarR.height/32;
+    var speed_height_offset = canvas_sonarR.height/250;
     
     //calls draw at this rate in milliseconds
     window.setInterval(draw,500);
     function draw() {        
         Tower.updateData(); //updated data from DB
+        if (Tower.data.length < 1) return;
         //used to erase canvas
         canvas_sonarR.width = canvas_sonarR.width;
         canvas_sonarL.width = canvas_sonarL.width;
         canvas_servo.width = canvas_servo.width;
         canvas_pos.width = canvas_pos.width;
-        var servo_rad = (360 - Tower.lastData.Servo) * Math.PI / 180;
+        canvas_carAngle.width = canvas_carAngle.width;
+        canvas_speed.width = canvas_speed.width;
         
+        var servo_rad = (360 - Tower.lastData.Servo) * Math.PI / 180;        
         drawServoTemplate(servo_rad);
+        
+        var car_rad = (360 - Tower.lastData.CarAngle) * Math.PI / 180;    
+        drawCarDirectionTemplate(car_rad);
         
         var origin_x = canvas_pos.width / 2;
         var origin_z = canvas_pos.height / 2;
@@ -38,7 +48,7 @@ app.controller('TowerDashboardController', [ '$scope', '$http', '$rootScope', '$
         drawPositionTemplate();
         
         
-        //
+        //Used to setup first data point for drawing line wave
         context_sonarR.beginPath();
         context_sonarR.moveTo( 
             sonar_width_offset * (0 + (100 - Tower.data.length)),
@@ -49,7 +59,12 @@ app.controller('TowerDashboardController', [ '$scope', '$http', '$rootScope', '$
             sonar_width_offset * (0 + (100 - Tower.data.length)),
            canvas_sonarL.height - (Tower.data[0].Sonar.left * sonar_height_offset) 
         );
-
+        context_speed.beginPath();
+        context_speed.moveTo( 
+            sonar_width_offset * (0 + (100 - Tower.data.length)),
+           canvas_speed.height - (Tower.data[0].Speed * speed_height_offset) 
+        );
+        
         Tower.data.forEach(function(element, index, array) {   
             
             
@@ -76,6 +91,13 @@ app.controller('TowerDashboardController', [ '$scope', '$http', '$rootScope', '$
                 positing_dot_scale= 4;                 
              } 
             context_pos.fillRect((element.Position.x * position_scale) + origin_x, (element.Position.z * position_scale ) + origin_z,positing_dot_scale,positing_dot_scale);
+            
+            //Speed Data
+            var speedX = sonar_width_offset * (index + (100 - Tower.data.length));
+            var speedY = canvas_speed.height - (element.Speed * speed_height_offset);
+            context_speed.strokeStyle = "rgb(" + speedX + ",30,0)";
+            context_speed.lineTo(speedX, speedY);
+            context_speed.stroke();
             
         });
                 
@@ -132,6 +154,42 @@ app.controller('TowerDashboardController', [ '$scope', '$http', '$rootScope', '$
         context_servo.stroke();
     }
     
+    //Draw function for every Car Angle Call
+    function drawCarDirectionTemplate(radian) {
+        var mid_width = canvas_servo.width / 2;
+        var mid_height = canvas_servo.height / 2;
+        var pos_radius = mid_width - 10;
+        var line1 = (radian * 180 / Math.PI) - 22.5;
+        var line2 = (radian * 180 / Math.PI) + 22.5;
+        
+        context_carAngle.beginPath();
+        context_carAngle.strokeStyle = "rgba(180, 180, 180, .6)";
+        context_carAngle.moveTo(0, canvas_servo.height / 2);
+        context_carAngle.lineTo(canvas_servo.width, canvas_servo.height / 2);
+        context_carAngle.stroke();
+        context_carAngle.beginPath();
+        context_carAngle.moveTo(canvas_servo.width / 2, 0);
+        context_carAngle.lineTo(canvas_servo.width / 2, canvas_servo.height);
+        context_carAngle.stroke();
+        context_carAngle.fillText("90",canvas_servo.width / 2 - 20, 15);
+        context_carAngle.fillText("0",canvas_servo.width - 20, canvas_servo.height / 2 - 10);
+        
+        //first fan design
+        context_carAngle.beginPath();
+        context_carAngle.strokeStyle = "green";
+        context_carAngle.arc(mid_width, mid_height, pos_radius, line1 * DEG_TO_RAD, line2 * DEG_TO_RAD);
+        context_carAngle.stroke();
+        context_carAngle.beginPath();
+        context_carAngle.moveTo(mid_width, mid_height);
+        context_carAngle.lineTo(pos_radius * Math.cos(line1 * DEG_TO_RAD) + mid_width, pos_radius * Math.sin(line1 * DEG_TO_RAD) + mid_height);
+        context_carAngle.stroke();
+        context_carAngle.beginPath();
+        context_carAngle.moveTo(mid_width, mid_height);
+        context_carAngle.lineTo(pos_radius * Math.cos(line2 * DEG_TO_RAD) + mid_width, pos_radius * Math.sin(line2 * DEG_TO_RAD) + mid_height);
+        context_carAngle.stroke();
+        
+    }
+    
    var rings = 3;
    var radius = canvas_pos.width / 2;
    function drawPositionTemplate() {
@@ -160,59 +218,5 @@ app.controller('TowerDashboardController', [ '$scope', '$http', '$rootScope', '$
 
     draw(); //called at end to start draw loop
 
-    var currSpeed = 0;
-    var currAngle = 90; // 0 is right, 180 is left
-
-
-    $scope.forward = function() {
-        currSpeed = currSpeed == 250 ? currSpeed : currSpeed + 50;
-        var xmlHttp = new XMLHttpRequest();
-        var body = new FormData();
-        xmlHttp.onreadystatechange = function() { 
-            if (xmlHttp.readyState == 4 && xmlHttp.status == 200) callback(xmlHttp.responseText);
-        }
-        var argument = "f" + currSpeed;
-        xmlHttp.open("POST", "https://api.particle.io/v1/devices/55ff70066678505552540667/motor?access_token=74bc0dc850b15e3fc46b0a26ccd028dda9fc47c1", true); // true for asynchronous
-        body.append("arg", argument);
-        xmlHttp.send(body);
-    };
-
-    $scope.reverse = function() {
-        currSpeed = currSpeed == -250 ? currSpeed : currSpeed - 50;
-        var xmlHttp = new XMLHttpRequest();
-        var body = new FormData();
-        xmlHttp.onreadystatechange = function() { 
-            if (xmlHttp.readyState == 4 && xmlHttp.status == 200) callback(xmlHttp.responseText);
-        }
-        var argument = "r" + currSpeed;
-        xmlHttp.open("POST", "https://api.particle.io/v1/devices/55ff70066678505552540667/motor?access_token=74bc0dc850b15e3fc46b0a26ccd028dda9fc47c1", true); // true for asynchronous
-        body.append("arg", argument);
-        xmlHttp.send(body);
-    };
-
-    $scope.left = function() {
-        currAngle = currAngle == 180 ? currAngle : currAngle += 45;
-        var xmlHttp = new XMLHttpRequest();
-        var body = new FormData();
-        xmlHttp.onreadystatechange = function() { 
-            if (xmlHttp.readyState == 4 && xmlHttp.status == 200) callback(xmlHttp.responseText);
-        }
-        xmlHttp.open("POST", "https://api.particle.io/v1/devices/55ff70066678505552540667/motor?access_token=74bc0dc850b15e3fc46b0a26ccd028dda9fc47c1", true); // true for asynchronous
-        body.append("arg", currAngle);
-        xmlHttp.send(body);
-    };
-
-    $scope.right = function() {
-        currAngle = currAngle == 0 ? currAngle : currAngle -= 45;
-        var xmlHttp = new XMLHttpRequest();
-        var body = new FormData();
-        xmlHttp.onreadystatechange = function() { 
-            if (xmlHttp.readyState == 4 && xmlHttp.status == 200) callback(xmlHttp.responseText);
-        }
-        xmlHttp.open("POST", "https://api.particle.io/v1/devices/55ff70066678505552540667/motor?access_token=74bc0dc850b15e3fc46b0a26ccd028dda9fc47c1", true); // true for asynchronous
-        body.append("arg", currAngle);
-        xmlHttp.send(body);
-    }
-    
+        
 }]);
-

@@ -41,22 +41,3 @@ app.factory('Tower', ['$http', function($http){
     
     return towerFactory;
 }]);
-
-app.factory('Car', ['$http', function($http){
-    var carFactory = {}
-    carFactory.data = [];
-    carFactory.lastData = {};
-    
-    carFactory.updateData = function() { 
-        
-        //if (!carFactory.fetched) return;   
-        $http.get('/api/car/getNew').then(function(result) {
-                            
-                carFactory.data = result.data;                
-                carFactory.lastData = result.data[result.data.length - 1];
-              
-        });
-    }
-    
-    return carFactory;
-}]);
