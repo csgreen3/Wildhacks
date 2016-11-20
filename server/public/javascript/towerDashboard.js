@@ -1,3 +1,4 @@
+app.controller('TowerDashboardController', [ '$scope', '$http', '$rootScope', '$location', 'Tower', 'Car', function($scope, $http, $rootScope, $location, Tower, Car) {
     
     //Tower.updateData();    
     var DEG_TO_RAD = Math.PI / 180; 
@@ -92,6 +93,7 @@
 
                 //position dots
                  if (index < 97) {                 
+                    context_pos.fillStyle = "rgba(0,0,0,"+ (((100 - Tower.data.length) + index)/100.0)  + ")";            
                     positing_dot_scale= ((100 - Tower.data.length) + index)/20;
                  } else {
                     context_pos.fillStyle = "rgb(255,0,0)";           
