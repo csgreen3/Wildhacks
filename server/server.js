@@ -35,16 +35,7 @@ var car_1_id= BoyBlue;
 //api to mongoose calls
 var api = require('./routes/api');
 
-//-------------------------Sets up MongoDB Connection-----------------------------//
-var mongoURI = "mongodb://127.0.0.1:27017/Wildhacks"; //localhost:defaultPort/dataBase
 
-//sets up Mongoose
-var mongoose = require('mongoose'); //added for Mongo support
-var MongooseDB = mongoose.connect(mongoURI).connection; //makes connection
-MongooseDB.on('error', function(err) { console.log(err.message); console.log("Is MongoDB Running?"); });
-MongooseDB.once('open', function() {
-  console.log("mongooseDB connection open");
-});
 
 //-------------------------Node Setup-----------------------------//
 //Loops through starting after "node server.js" and checks the arguments
@@ -60,6 +51,18 @@ for (var i = 2; i < process.argv.length; i++) {
     }
 }
 
+//-------------------------Sets up MongoDB Connection-----------------------------//
+if (debugMode) {
+    var mongoURI = "mongodb://127.0.0.1:27017/Wildhacks"; //localhost:defaultPort/dataBase
+
+    //sets up Mongoose
+    var mongoose = require('mongoose'); //added for Mongo support
+    var MongooseDB = mongoose.connect(mongoURI).connection; //makes connection
+    MongooseDB.on('error', function(err) { console.log(err.message); console.log("Is MongoDB Running?"); });
+    MongooseDB.once('open', function() {
+      console.log("mongooseDB connection open");
+    });
+}
 //-------------------------Express JS configs-----------------------------//
 // view engine setup
 app.set('views', './views');
@@ -75,7 +78,7 @@ app.use(express.static(path.join(__dirname, 'public'))); //sets all static file 
 
 
 //-------------------------ROUTES-----------------------------//
-app.use('/api', api); //sets the API used to access the Database
+if (!debugMode) app.use('/api', api); //sets the API used to access the Database
 
 //used to help server know which device IDs are actually being used instead of scanning all 256
 app.get('/', function(req, res, next) {    
@@ -158,16 +161,19 @@ function collectTowerData() {
 }
 
 function saveTowerData(body){
-    var TowerSchema = require('./routes/tower/tower.model.js');
-    //create a new post    
-    body.Timestamp = new Date();
-    var newTower = new TowerSchema(body);   
-    newTower.save(function(err, post) {
-      if (err) {
-            console.error(err);
-            return;
-      }
-    });   
+   if (debugMode) {  
+       var TowerSchema = require('./routes/tower/tower.model.js');
+        //create a new post    
+        body.Timestamp = new Date();
+        var newTower = new TowerSchema(body);   
+        newTower.save(function(err, post) {
+          if (err) {
+                console.error(err);
+                return;
+          }
+        });   
+
+   }
 }
     
 //    var fnPr = particle.callFunction({ deviceId: d_uid, name: ('set_' + color_set), argument: new_value, auth: token });

@@ -1,6 +1,5 @@
-app.controller('TowerDashboardController', [ '$scope', '$http', '$rootScope', '$location', 'Tower', function($scope, $http, $rootScope, $location, Tower) {
     
-    Tower.updateData();    
+    //Tower.updateData();    
     var DEG_TO_RAD = Math.PI / 180; 
 
     //Calls to canvas to get as variables
@@ -23,10 +22,12 @@ app.controller('TowerDashboardController', [ '$scope', '$http', '$rootScope', '$
     var speed_height_offset = canvas_sonarR.height/250;
     
     //calls draw at this rate in milliseconds
-    window.setInterval(draw,500);
+    window.setInterval(draw,5000);
     function draw() {        
         Tower.updateData(); //updated data from DB
-        if (Tower.data.length < 1) return;
+        Car.updateData(); //updated data from DB
+        
+        
         //used to erase canvas
         canvas_sonarR.width = canvas_sonarR.width;
         canvas_sonarL.width = canvas_sonarL.width;
@@ -35,71 +36,84 @@ app.controller('TowerDashboardController', [ '$scope', '$http', '$rootScope', '$
         canvas_carAngle.width = canvas_carAngle.width;
         canvas_speed.width = canvas_speed.width;
         
-        var servo_rad = (360 - Tower.lastData.Servo) * Math.PI / 180;        
-        drawServoTemplate(servo_rad);
+        if (Tower.data.length > 0 ) {
+            
+            var servo_rad = (360 - Tower.lastData.Servo) * Math.PI / 180;        
+            drawServoTemplate(servo_rad);
+            
+            var origin_x = canvas_pos.width / 2;
+            var origin_z = canvas_pos.height / 2;
+            var position_scale = 20;
+            var positing_dot_scale;
+            drawPositionTemplate();
+
+
+            //Used to setup first data point for drawing line wave
+            context_sonarR.beginPath();
+            context_sonarR.moveTo( 
+                sonar_width_offset * (0 + (100 - Tower.data.length)),
+               canvas_sonarR.height - (Tower.data[0].Sonar.right * sonar_height_offset) 
+            );
+            context_sonarL.beginPath();
+            context_sonarL.moveTo( 
+                sonar_width_offset * (0 + (100 - Tower.data.length)),
+               canvas_sonarL.height - (Tower.data[0].Sonar.left * sonar_height_offset) 
+            );
         
-        var car_rad = (360 - Tower.lastData.CarAngle) * Math.PI / 180;    
-        drawCarDirectionTemplate(car_rad);
+        }
+        if (Car.data.length > 0 ) {
+            
+            var car_rad = (360 - Car.lastData.CarAngle) * Math.PI / 180;    
+            drawCarDirectionTemplate(car_rad);
+            
+            context_speed.beginPath();
+            context_speed.moveTo( 
+                sonar_width_offset * (0 + (100 - Tower.data.length)),
+               canvas_speed.height - (Car.data[0].Speed * speed_height_offset) 
+            );
         
-        var origin_x = canvas_pos.width / 2;
-        var origin_z = canvas_pos.height / 2;
-        var position_scale = 20;
-        var positing_dot_scale;
-        drawPositionTemplate();
+        }
         
+        if (Tower.data.length > 0 ) {
+            Tower.data.forEach(function(element, index, array) {  
+
+                //right sonar            
+                var x = sonar_width_offset * (index + (100 - Tower.data.length));
+                var yR =canvas_sonarR.height - (element.Sonar.right * sonar_height_offset);
+                context_sonarR.strokeStyle = "rgb(0,30," + x + ")";
+                context_sonarR.lineTo(x, yR);
+                context_sonarR.stroke();
+
+                //left sonar
+                var yL =canvas_sonarL.height - (element.Sonar.left * sonar_height_offset)
+                context_sonarL.strokeStyle = "rgb(0," + x + ",30)";
+                context_sonarL.lineTo(x, yL);
+                context_sonarL.stroke();
+
+                //position dots
+                 if (index < 97) {                 
+                    positing_dot_scale= ((100 - Tower.data.length) + index)/20;
+                 } else {
+                    context_pos.fillStyle = "rgb(255,0,0)";           
+                    positing_dot_scale= 4;                 
+                 } 
+                context_pos.fillRect((element.Position.x * position_scale) + origin_x, (element.Position.z * position_scale ) + origin_z,positing_dot_scale,positing_dot_scale);
+
+
+
+            });
+        }
         
-        //Used to setup first data point for drawing line wave
-        context_sonarR.beginPath();
-        context_sonarR.moveTo( 
-            sonar_width_offset * (0 + (100 - Tower.data.length)),
-           canvas_sonarR.height - (Tower.data[0].Sonar.right * sonar_height_offset) 
-        );
-        context_sonarL.beginPath();
-        context_sonarL.moveTo( 
-            sonar_width_offset * (0 + (100 - Tower.data.length)),
-           canvas_sonarL.height - (Tower.data[0].Sonar.left * sonar_height_offset) 
-        );
-        context_speed.beginPath();
-        context_speed.moveTo( 
-            sonar_width_offset * (0 + (100 - Tower.data.length)),
-           canvas_speed.height - (Tower.data[0].Speed * speed_height_offset) 
-        );
-        
-        Tower.data.forEach(function(element, index, array) {   
-            
-            
-            
-            //right sonar            
-            var x = sonar_width_offset * (index + (100 - Tower.data.length));
-            var yR =canvas_sonarR.height - (element.Sonar.right * sonar_height_offset);
-            context_sonarR.strokeStyle = "rgb(0,30," + x + ")";
-            context_sonarR.lineTo(x, yR);
-            context_sonarR.stroke();
-            
-            //left sonar
-            var yL =canvas_sonarL.height - (element.Sonar.left * sonar_height_offset)
-            context_sonarL.strokeStyle = "rgb(0," + x + ",30)";
-            context_sonarL.lineTo(x, yL);
-            context_sonarL.stroke();
-            
-            //position dots
-             if (index < 97) {                 
-                context_pos.fillStyle = "rgba(0,0,0,"+ (index/100.0)  + ")";            
-                positing_dot_scale= index/20;
-             } else {
-                context_pos.fillStyle = "rgb(255,0,0)";           
-                positing_dot_scale= 4;                 
-             } 
-            context_pos.fillRect((element.Position.x * position_scale) + origin_x, (element.Position.z * position_scale ) + origin_z,positing_dot_scale,positing_dot_scale);
-            
-            //Speed Data
-            var speedX = sonar_width_offset * (index + (100 - Tower.data.length));
-            var speedY = canvas_speed.height - (element.Speed * speed_height_offset);
-            context_speed.strokeStyle = "rgb(" + speedX + ",30,0)";
-            context_speed.lineTo(speedX, speedY);
-            context_speed.stroke();
-            
-        });
+        if (Car.data.length > 0 ) {
+            Car.data.forEach(function(element, index, array) {
+                //Speed Data
+                var speedX = sonar_width_offset * (index + (100 - Tower.data.length));
+                var speedY = canvas_speed.height - (element.Speed * speed_height_offset);
+                context_speed.strokeStyle = "rgb(" + speedX + ",30,0)";
+                context_speed.lineTo(speedX, speedY);
+                context_speed.stroke();
+            });
+        }
                 
     }
         
@@ -156,23 +170,23 @@ app.controller('TowerDashboardController', [ '$scope', '$http', '$rootScope', '$
     
     //Draw function for every Car Angle Call
     function drawCarDirectionTemplate(radian) {
-        var mid_width = canvas_servo.width / 2;
-        var mid_height = canvas_servo.height / 2;
+        var mid_width = canvas_carAngle.width / 2;
+        var mid_height = canvas_carAngle.height / 2;
         var pos_radius = mid_width - 10;
         var line1 = (radian * 180 / Math.PI) - 22.5;
         var line2 = (radian * 180 / Math.PI) + 22.5;
         
         context_carAngle.beginPath();
         context_carAngle.strokeStyle = "rgba(180, 180, 180, .6)";
-        context_carAngle.moveTo(0, canvas_servo.height / 2);
-        context_carAngle.lineTo(canvas_servo.width, canvas_servo.height / 2);
+        context_carAngle.moveTo(0, canvas_carAngle.height / 2);
+        context_carAngle.lineTo(canvas_carAngle.width, canvas_carAngle.height / 2);
         context_carAngle.stroke();
         context_carAngle.beginPath();
-        context_carAngle.moveTo(canvas_servo.width / 2, 0);
-        context_carAngle.lineTo(canvas_servo.width / 2, canvas_servo.height);
+        context_carAngle.moveTo(canvas_carAngle.width / 2, 0);
+        context_carAngle.lineTo(canvas_carAngle.width / 2, canvas_carAngle.height);
         context_carAngle.stroke();
-        context_carAngle.fillText("90",canvas_servo.width / 2 - 20, 15);
-        context_carAngle.fillText("0",canvas_servo.width - 20, canvas_servo.height / 2 - 10);
+        context_carAngle.fillText("90",canvas_carAngle.width / 2 - 20, 15);
+        context_carAngle.fillText("0",canvas_carAngle.width - 20, canvas_carAngle.height / 2 - 10);
         
         //first fan design
         context_carAngle.beginPath();
