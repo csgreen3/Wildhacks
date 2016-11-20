@@ -1,4 +1,4 @@
-app.controller('TowerDashboardController', [ '$scope', '$http', '$rootScope', '$location', 'Tower', 'Car', function($scope, $http, $rootScope, $location, Tower, Car) {
+app.controller('TowerDashboardController', [ '$scope', '$http', 'Tower', 'Car', function($scope, $http, Tower, Car) {
     
     //Tower.updateData();    
     var DEG_TO_RAD = Math.PI / 180; 
@@ -37,7 +37,7 @@ app.controller('TowerDashboardController', [ '$scope', '$http', '$rootScope', '$
         canvas_carAngle.width = canvas_carAngle.width;
         canvas_speed.width = canvas_speed.width;
         
-        if (Tower.data.length > 0 ) {
+        if (Tower.data.length > -1 ) {
             
             var servo_rad = (360 - Tower.lastData.Servo) * Math.PI / 180;        
             drawServoTemplate(servo_rad);
@@ -62,7 +62,7 @@ app.controller('TowerDashboardController', [ '$scope', '$http', '$rootScope', '$
             );
         
         }
-        if (Car.data.length > 0 ) {
+        if (Car.data.length > -1 ) {
             
             var car_rad = (360 - Car.lastData.CarAngle) * Math.PI / 180;    
             drawCarDirectionTemplate(car_rad);
@@ -75,7 +75,7 @@ app.controller('TowerDashboardController', [ '$scope', '$http', '$rootScope', '$
         
         }
         
-        if (Tower.data.length > 0 ) {
+        if (Tower.data.length > -1 ) {
             Tower.data.forEach(function(element, index, array) {  
 
                 //right sonar            
@@ -106,7 +106,7 @@ app.controller('TowerDashboardController', [ '$scope', '$http', '$rootScope', '$
             });
         }
         
-        if (Car.data.length > 0 ) {
+        if (Car.data.length > -1 ) {
             Car.data.forEach(function(element, index, array) {
                 //Speed Data
                 var speedX = sonar_width_offset * (index + (100 - Tower.data.length));

@@ -38,3 +38,21 @@
     height:60px;
     width: 85px;
 }
+
+button{
+    z-index: 99;
+}
+
+#animate-area {
+    background-image: url(../images/seamless_cyber_2.png);
+	background-position: 0px 0px;
+	background-repeat: repeat-x;
+    height: 100vh;
+	animation: animatedBackground 80s linear infinite;
+	
+}
+
+@keyframes animatedBackground {
+	from { background-position: 0 0; }
+	to { background-position: 100% 0; }
+}
