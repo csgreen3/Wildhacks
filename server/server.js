@@ -8,7 +8,6 @@ var logger = require('morgan'); //used to log in console window all request
 var cookieParser = require('cookie-parser'); //Parse Cookie header and populate req.cookies
 var bodyParser = require('body-parser'); //allows the use of req.body in POST request
 var server = require('http').createServer(app); //creates an HTTP server instance
-var http = require('http'); //Node.js module creates an instance of HTTP to make calls to Pi
 var https = require('https'); //Node.js module creates an instance of HTTP to make calls to Pi
 //var net = require('net'); // Load the TCP Library
 //var io = require('./sockets').listen(server) //allows for sockets on the HTTP server instance
@@ -82,7 +81,6 @@ app.use('/api', api); //sets the API used to access the Database
 app.get('/', function(req, res, next) {    
     res.render('Dashboard');
 });
-
 
 var towerTimer;
 var generateTimer;

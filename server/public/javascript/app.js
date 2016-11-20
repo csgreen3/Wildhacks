@@ -14,11 +14,10 @@ app.config(['$routeProvider', function($routeProvider) {
       templateUrl: 'templates/towerDashboard.html',
       controller:  'TowerDashboardController'
     }).
-//    when('/room', {
-//      templateUrl: 'templates/room.html',
-//      controller:  'RoomController',
-//      controllerAs: 'Room'
-//    }).
+    when('/car', {
+      templateUrl: 'templates/carDashboard.html',
+      controller:  'CarDashboardController',
+    }).
     otherwise({
       redirectTo: '/'
     });
@@ -26,24 +25,12 @@ app.config(['$routeProvider', function($routeProvider) {
 
 app.factory('Tower', ['$http', function($http){
     var towerFactory = {}
-    towerFactory.fetched = false;
     towerFactory.data = [];
     towerFactory.lastData = {};
     
-    //gets all init data and returns last data for time comparison
-    towerFactory.fetchData = function() {
-        $http.get('/api/tower/').then(function(result){
-            towerFactory.data = result.data;
-            towerFactory.lastData = towerFactory.data[towerFactory.data.length - 1];
-            //console.log(towerFactory.lastData);
-            towerFactory.fetched = true;
-
-        })
-    }
-    
     towerFactory.updateData = function() { 
         
-        //if (!towerFactory.fetched) return;   
+        //REMOVE IF NO DATABASE
         $http.get('/api/tower/getNew').then(function(result) {
                             
                 towerFactory.data = result.data;                
@@ -53,4 +40,23 @@ app.factory('Tower', ['$http', function($http){
     }
     
     return towerFactory;
+}]);
+
+app.factory('Car', ['$http', function($http){
+    var carFactory = {}
+    carFactory.data = [];
+    carFactory.lastData = {};
+    
+    carFactory.updateData = function() { 
+        
+        //if (!carFactory.fetched) return;   
+        $http.get('/api/car/getNew').then(function(result) {
+                            
+                carFactory.data = result.data;                
+                carFactory.lastData = result.data[result.data.length - 1];
+              
+        });
+    }
+    
+    return carFactory;
 }]);

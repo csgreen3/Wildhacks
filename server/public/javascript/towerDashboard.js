@@ -4,20 +4,21 @@ app.controller('TowerDashboardController', [ '$scope', '$http', '$rootScope', '$
     
     var DEG_TO_RAD = Math.PI / 180; 
 
+    //Calls to canvas to get as variables
     var canvas_sonarR = document.getElementById('towerCanvas_SonarR');
     var context_sonarR = canvas_sonarR.getContext('2d');    
     var canvas_sonarL = document.getElementById('towerCanvas_SonarL');
-    var context_sonarL = canvas_sonarL.getContext('2d');
-    
+    var context_sonarL = canvas_sonarL.getContext('2d');    
     var canvas_servo = document.getElementById('towerCanvas_Servo');
-    var context_servo = canvas_servo.getContext('2d');
-    
+    var context_servo = canvas_servo.getContext('2d');    
     var canvas_pos = document.getElementById('towerCanvas_Pos');
     var context_pos = canvas_pos.getContext('2d');
+        
     
     var sonar_width_offset = canvas_sonarR.width/100;
     var sonar_height_offset = canvas_sonarR.height/32;
     
+    //calls draw at this rate in milliseconds
     window.setInterval(draw,500);
     function draw() {        
         Tower.updateData(); //updated data from DB
@@ -52,22 +53,17 @@ app.controller('TowerDashboardController', [ '$scope', '$http', '$rootScope', '$
         Tower.data.forEach(function(element, index, array) {   
             
             
-            //addCurveSegment(context_sonarR, element.Sonar.right, sonarR)
             
-            //right sonar
-            
+            //right sonar            
             var x = sonar_width_offset * (index + (100 - Tower.data.length));
             var yR =canvas_sonarR.height - (element.Sonar.right * sonar_height_offset);
             context_sonarR.strokeStyle = "rgb(0,30," + x + ")";
-            //context_sonarR.fillRect(x,yR,1,3);
-            
             context_sonarR.lineTo(x, yR);
             context_sonarR.stroke();
             
             //left sonar
             var yL =canvas_sonarL.height - (element.Sonar.left * sonar_height_offset)
             context_sonarL.strokeStyle = "rgb(0," + x + ",30)";
-            //context_sonarL.fillRect(x,yL,1,3);
             context_sonarL.lineTo(x, yL);
             context_sonarL.stroke();
             
@@ -84,12 +80,8 @@ app.controller('TowerDashboardController', [ '$scope', '$http', '$rootScope', '$
         });
                 
     }
-    
-    var canvas_pos = document.getElementById('towerCanvas_Pos');
-    var context_pos = canvas_pos.getContext('2d');
-    
-    
-    
+        
+    //Draw function for every Servo Call
     function drawServoTemplate(radian) {
         var mid_width = canvas_servo.width / 2;
         var mid_height = canvas_servo.height / 2;
@@ -164,31 +156,7 @@ app.controller('TowerDashboardController', [ '$scope', '$http', '$rootScope', '$
             context_pos.stroke();
        };
        
-       
-       
-       
-       
     }
-        
-//    function addCurveSegment(context, i, points) {
-//    var averageLineLength, du, end, pieceCount, pieceLength, s, start, t, u, _ref, _ref2, _ref3;    
-//    averageLineLength = 1;
-//    pieceCount = 2;
-//    for (t = 0, _ref = 1 / pieceCount; t < 1; t += _ref) {
-//      _ref2 = [points[Math.floor(i + t)], points[Math.floor(i + t + 1 / pieceCount)]], start = _ref2[0], end = _ref2[1];
-//        console.log(_ref2);
-//      pieceLength = distance(start, end);
-//      du = averageLineLength / pieceLength;
-//      for (u = 0, _ref3 = 1 / pieceCount; 0 <= _ref3 ? u < _ref3 : u > _ref3; u += du) {
-//        context.lineTo.apply(context, points[Math.floor(i + t + u)]);
-//      }
-//    }
-//    return context.lineTo.apply(context, points[Math.floor(i + 1)]);
-//  };
-//    
-//  function distance(a, b) {
-//    return Math.sqrt(Math.pow(a[0] - b[0], 2) + Math.pow(a[1] - b[1], 2));
-//  };
 
     draw(); //called at end to start draw loop
     
