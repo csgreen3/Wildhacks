@@ -22,6 +22,7 @@ void readUltra(){
   digitalWrite(Rout, HIGH);
   delayMicroseconds(5);
   digitalWrite(Rout, LOW);
+ pinMode(Rin, INPUT);
 
   Rduration = pulseIn(Rin, HIGH);
   
@@ -31,10 +32,11 @@ void readUltra(){
   digitalWrite(Lout, HIGH);
   delayMicroseconds(5);
   digitalWrite(Lout, LOW);
+ pinMode(Lin, INPUT);
 
   Lduration = pulseIn(Lin, HIGH);
 
 
-  Rinches = microsecondsToInches(Rduration);
-  Linches = microsecondsToInches(Lduration);
+  Rinches = Rduration / 74 / 2 ;
+  Linches = Lduration / 74 / 2;
 }
