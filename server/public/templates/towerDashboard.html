@@ -17,12 +17,12 @@
     
     <div class="col-md-4 col-sm-12">
         <div  style="text-align: center; width:100%">
-            <div class="buttonBox vertButton" style="padding-top: 7px;">&#8593;</div>
+            <div class="buttonBox vertButton" ng-click="forward()" style="padding-top: 7px;">&#8593;</div><!-- Up -->
             <div style="display: inline-flex;">
-                <div class="buttonBox horButton" style="margin-right:25px;">&#8592;</div>    
-                <div class="buttonBox horButton">&#8594;</div>    
+                <div class="buttonBox horButton" ng-click="left()" style="margin-right:25px;">&#8592;</div><!-- Left -->    
+                <div class="buttonBox horButton" ng-click="right()">&#8594;</div><!-- Right -->    
             </div>
-            <div class="buttonBox vertButton" style="padding-bottom: 7px;">&#8595;</div>    
+            <div class="buttonBox vertButton" ng-click="reverse()" style="padding-bottom: 7px;">&#8595;</div><!-- Down -->    
         </div>
     </div>
     
