@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+
+<html lang="en">
+    <head>
+    <title>WildHacks</title>
+    </head>
+    
+    <body >
+        <div>        
+            <button onclick="toggle('red')" id="redB" style="width: 49%;height: 100vh; background: 0xc9ffc9 "> Toggle Red </button>
+            <button onclick="toggle('green')" id="greenB" style="width: 49%;height: 100vh;"> Toggle Green </button>
+        </div>
+        
+    </body>    
+    
+    <script src="lib/jquery.min.js"></script>
+    <script>
+        var colors = ["red", "gray", "green", "grey"]; 
+        
+        var green = "<%= green %>"; 
+        var red = "<%= red %>";
+        
+        function init() {
+        
+            document.getElementById('redB').style.background = colors[parseInt(red)];
+            document.getElementById('greenB').style.background = colors[parseInt(green) + 2];
+            
+        }
+        
+        console.log(colors[red]);
+        console.log(colors[parseInt(green) + 2]);
+        
+        function toggle(color) { 
+            var sendValue;
+            
+            if (color == "red") {
+                if (red == 0) {
+                    red = 1;
+                    sendValue = 0;
+                } else {
+                    red = 0;
+                    sendValue = 1;
+                }
+            } else {
+                if (green == 0) {
+                    green = 1;
+                    sendValue = 0;
+                } else {
+                    green = 0;
+                    sendValue = 1;
+                }
+            }
+            $.post( "/toggle", { color: color, value: sendValue }, function( data ) {
+              init();
+            });
+        }
+        
+        window.onload = init;
+    </script>
+    
+</html>

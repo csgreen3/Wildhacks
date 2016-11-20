@@ -1,0 +1,47 @@
+
+<!doctype html>
+<html lang="en" ng-app="app">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, user-scalable=no, minimum-scale=1.0, maximum-scale=1.0, shrink-to-fit=no">
+    <meta name="mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+
+    <title>WildHacks</title>
+    
+    <link type="text/css" rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="lib/bootstrap.min.css">
+    
+<!--    <script src="lib/jquery.min.js" type="text/javascript"></script>-->
+    <script src="lib/three.min.js" type="text/javascript"></script> 
+    <script src="lib/angular.min.js" type="text/javascript"></script> 
+    <script src="lib/angular-route.min.js" type="text/javascript"></script> 
+<!--    <script src="lib/Smooth.js" type="text/javascript"></script> -->
+    
+<!--
+    <script src='/socket.io/socket.io.js'></script>
+    <script>
+      var socket = io.connect();
+        socket.on('connect', function(data) { 
+            console.log("Connected To sockets");
+        });
+    </script>
+-->
+    
+    
+</head>
+        
+    <body >
+         <!--  Route provider in app.js  -->
+        <main ng-view></main>        
+    </body>        
+
+    
+     <script src="javascript/app.js" type="text/javascript"></script> 
+     <script src="javascript/towerDashboard.js" type="text/javascript"></script> 
+     
+    
+    
+    
+</html>

@@ -1,0 +1,1400 @@
+{ 
+    "_id" : ObjectId("583196e85fd00723e028b9a7"), 
+    "Sonar" : {
+        "right" : 8.705715731484815, 
+        "left" : 7.881661026971415
+    }, 
+    "Servo" : NumberInt(40), 
+    "Position" : {
+        "z" : 1.028752714395523, 
+        "x" : 0.015026944689452648
+    }, 
+    "Timestamp" : ISODate("2016-11-20T12:28:24.394+0000"), 
+    "__v" : NumberInt(0)
+}
+{ 
+    "_id" : ObjectId("583196e85fd00723e028b9a8"), 
+    "Sonar" : {
+        "right" : 7.767129880725406, 
+        "left" : 7.809045993722975
+    }, 
+    "Servo" : NumberInt(45), 
+    "Position" : {
+        "z" : 0.8071116202045232, 
+        "x" : 0.7831996497698128
+    }, 
+    "Timestamp" : ISODate("2016-11-20T12:28:24.695+0000"), 
+    "__v" : NumberInt(0)
+}
+{ 
+    "_id" : ObjectId("583196e85fd00723e028b9a9"), 
+    "Sonar" : {
+        "right" : 7.550913168932311, 
+        "left" : 7.2413271417608485
+    }, 
+    "Servo" : NumberInt(50), 
+    "Position" : {
+        "z" : 0.26215252140536904, 
+        "x" : 1.2070785705000162
+    }, 
+    "Timestamp" : ISODate("2016-11-20T12:28:24.997+0000"), 
+    "__v" : NumberInt(0)
+}
+{ 
+    "_id" : ObjectId("583196e95fd00723e028b9aa"), 
+    "Sonar" : {
+        "right" : 7.8717860142933205, 
+        "left" : 8.394302343251184
+    }, 
+    "Servo" : NumberInt(55), 
+    "Position" : {
+        "z" : -0.18357751076109707, 
+        "x" : 1.291851863032207
+    }, 
+    "Timestamp" : ISODate("2016-11-20T12:28:25.301+0000"), 
+    "__v" : NumberInt(0)
+}
+{ 
+    "_id" : ObjectId("583196e95fd00723e028b9ab"), 
+    "Sonar" : {
+        "right" : 6.758295022184029, 
+        "left" : 8.21539113135077
+    }, 
+    "Servo" : NumberInt(60), 
+    "Position" : {
+        "z" : 0.31367776612751186, 
+        "x" : 0.7154070541728288
+    }, 
+    "Timestamp" : ISODate("2016-11-20T12:28:25.604+0000"), 
+    "__v" : NumberInt(0)
+}
+{ 
+    "_id" : ObjectId("583196e95fd00723e028b9ac"), 
+    "Sonar" : {
+        "right" : 7.055988024105318, 
+        "left" : 7.1308433772064745
+    }, 
+    "Servo" : NumberInt(65), 
+    "Position" : {
+        "z" : -0.49712257366627455, 
+        "x" : 0.911801834590733
+    }, 
+    "Timestamp" : ISODate("2016-11-20T12:28:25.906+0000"), 
+    "__v" : NumberInt(0)
+}
+{ 
+    "_id" : ObjectId("583196ea5fd00723e028b9ad"), 
+    "Sonar" : {
+        "right" : 6.740896597504616, 
+        "left" : 7.2129967047367245
+    }, 
+    "Servo" : NumberInt(70), 
+    "Position" : {
+        "z" : -0.5815561797935516, 
+        "x" : 0.9829055091831833
+    }, 
+    "Timestamp" : ISODate("2016-11-20T12:28:26.209+0000"), 
+    "__v" : NumberInt(0)
+}
+{ 
+    "_id" : ObjectId("583196ea5fd00723e028b9ae"), 
+    "Sonar" : {
+        "right" : 7.281966711045243, 
+        "left" : 7.808811750262976
+    }, 
+    "Servo" : NumberInt(75), 
+    "Position" : {
+        "z" : -0.12256387621164322, 
+        "x" : 0.7531001556199044
+    }, 
+    "Timestamp" : ISODate("2016-11-20T12:28:26.509+0000"), 
+    "__v" : NumberInt(0)
+}
+{ 
+    "_id" : ObjectId("583196ea5fd00723e028b9af"), 
+    "Sonar" : {
+        "right" : 8.097372556687333, 
+        "left" : 7.318313832045533
+    }, 
+    "Servo" : NumberInt(80), 
+    "Position" : {
+        "z" : -0.6798208658583462, 
+        "x" : 0.7080338164232671
+    }, 
+    "Timestamp" : ISODate("2016-11-20T12:28:26.812+0000"), 
+    "__v" : NumberInt(0)
+}
+{ 
+    "_id" : ObjectId("583196eb5fd00723e028b9b0"), 
+    "Sonar" : {
+        "right" : 8.971197312115692, 
+        "left" : 7.6315502373036
+    }, 
+    "Servo" : NumberInt(85), 
+    "Position" : {
+        "z" : -0.4827144572045654, 
+        "x" : 0.8488873830065131
+    }, 
+    "Timestamp" : ISODate("2016-11-20T12:28:27.115+0000"), 
+    "__v" : NumberInt(0)
+}
+{ 
+    "_id" : ObjectId("583196eb5fd00723e028b9b1"), 
+    "Sonar" : {
+        "right" : 9.253757210448384, 
+        "left" : 7.733704400714487
+    }, 
+    "Servo" : NumberInt(90), 
+    "Position" : {
+        "z" : -0.5720449856016785, 
+        "x" : 1.0273893589619547
+    }, 
+    "Timestamp" : ISODate("2016-11-20T12:28:27.417+0000"), 
+    "__v" : NumberInt(0)
+}
+{ 
+    "_id" : ObjectId("583196eb5fd00723e028b9b2"), 
+    "Sonar" : {
+        "right" : 9.238371338695288, 
+        "left" : 7.638811444747262
+    }, 
+    "Servo" : NumberInt(95), 
+    "Position" : {
+        "z" : -0.6169802476651967, 
+        "x" : 1.4362831248436123
+    }, 
+    "Timestamp" : ISODate("2016-11-20T12:28:27.719+0000"), 
+    "__v" : NumberInt(0)
+}
+{ 
+    "_id" : ObjectId("583196ec5fd00723e028b9b3"), 
+    "Sonar" : {
+        "right" : 10.301069330307655, 
+        "left" : 6.694038809277117
+    }, 
+    "Servo" : NumberInt(100), 
+    "Position" : {
+        "z" : -0.9938257983885705, 
+        "x" : 1.0983132389374077
+    }, 
+    "Timestamp" : ISODate("2016-11-20T12:28:28.021+0000"), 
+    "__v" : NumberInt(0)
+}
+{ 
+    "_id" : ObjectId("583196ec5fd00723e028b9b4"), 
+    "Sonar" : {
+        "right" : 10.49199031572789, 
+        "left" : 7.818159215850756
+    }, 
+    "Servo" : NumberInt(105), 
+    "Position" : {
+        "z" : -1.0421991171315312, 
+        "x" : 1.2483736658468843
+    }, 
+    "Timestamp" : ISODate("2016-11-20T12:28:28.327+0000"), 
+    "__v" : NumberInt(0)
+}
+{ 
+    "_id" : ObjectId("583196ec5fd00723e028b9b5"), 
+    "Sonar" : {
+        "right" : 11.004112290334888, 
+        "left" : 7.650675044162199
+    }, 
+    "Servo" : NumberInt(110), 
+    "Position" : {
+        "z" : -1.553448990220204, 
+        "x" : 1.6761105449404567
+    }, 
+    "Timestamp" : ISODate("2016-11-20T12:28:28.630+0000"), 
+    "__v" : NumberInt(0)
+}
+{ 
+    "_id" : ObjectId("583196ec5fd00723e028b9b6"), 
+    "Sonar" : {
+        "right" : 10.067108690040186, 
+        "left" : 6.368418732658029
+    }, 
+    "Servo" : NumberInt(115), 
+    "Position" : {
+        "z" : -1.323786617955193, 
+        "x" : 1.748271563090384
+    }, 
+    "Timestamp" : ISODate("2016-11-20T12:28:28.932+0000"), 
+    "__v" : NumberInt(0)
+}
+{ 
+    "_id" : ObjectId("583196ed5fd00723e028b9b7"), 
+    "Sonar" : {
+        "right" : 10.136225176625885, 
+        "left" : 5.239321479573846
+    }, 
+    "Servo" : NumberInt(120), 
+    "Position" : {
+        "z" : -1.676939417840913, 
+        "x" : 1.544948103139177
+    }, 
+    "Timestamp" : ISODate("2016-11-20T12:28:29.234+0000"), 
+    "__v" : NumberInt(0)
+}
+{ 
+    "_id" : ObjectId("583196ed5fd00723e028b9b8"), 
+    "Sonar" : {
+        "right" : 10.749699379899539, 
+        "left" : 5.34893684333656
+    }, 
+    "Servo" : NumberInt(125), 
+    "Position" : {
+        "z" : -1.7298067102674395, 
+        "x" : 1.9039983642287552
+    }, 
+    "Timestamp" : ISODate("2016-11-20T12:28:29.535+0000"), 
+    "__v" : NumberInt(0)
+}
+{ 
+    "_id" : ObjectId("583196ed5fd00723e028b9b9"), 
+    "Sonar" : {
+        "right" : 10.443888582289219, 
+        "left" : 4.828500643838197
+    }, 
+    "Servo" : NumberInt(130), 
+    "Position" : {
+        "z" : -1.1082884625066072, 
+        "x" : 1.9296034518629313
+    }, 
+    "Timestamp" : ISODate("2016-11-20T12:28:29.843+0000"), 
+    "__v" : NumberInt(0)
+}
+{ 
+    "_id" : ObjectId("583196ee5fd00723e028b9ba"), 
+    "Sonar" : {
+        "right" : 9.996115781716071, 
+        "left" : 3.787667283206247
+    }, 
+    "Servo" : NumberInt(135), 
+    "Position" : {
+        "z" : -2.073326254496351, 
+        "x" : 1.77516646287404
+    }, 
+    "Timestamp" : ISODate("2016-11-20T12:28:30.145+0000"), 
+    "__v" : NumberInt(0)
+}
+{ 
+    "_id" : ObjectId("583196ee5fd00723e028b9bb"), 
+    "Sonar" : {
+        "right" : 9.811707796994597, 
+        "left" : 4.165282565867528
+    }, 
+    "Servo" : NumberInt(140), 
+    "Position" : {
+        "z" : -1.5406687334179878, 
+        "x" : 1.1885550760198385
+    }, 
+    "Timestamp" : ISODate("2016-11-20T12:28:30.445+0000"), 
+    "__v" : NumberInt(0)
+}
+{ 
+    "_id" : ObjectId("583196ee5fd00723e028b9bc"), 
+    "Sonar" : {
+        "right" : 9.737934688921086, 
+        "left" : 3.787197236553766
+    }, 
+    "Servo" : NumberInt(145), 
+    "Position" : {
+        "z" : -0.8395834045950323, 
+        "x" : 1.3938365336507559
+    }, 
+    "Timestamp" : ISODate("2016-11-20T12:28:30.748+0000"), 
+    "__v" : NumberInt(0)
+}
+{ 
+    "_id" : ObjectId("583196ef5fd00723e028b9bd"), 
+    "Sonar" : {
+        "right" : 9.502289332915097, 
+        "left" : 5.208778283325955
+    }, 
+    "Servo" : NumberInt(150), 
+    "Position" : {
+        "z" : -1.687668559839949, 
+        "x" : 1.111910795327276
+    }, 
+    "Timestamp" : ISODate("2016-11-20T12:28:31.050+0000"), 
+    "__v" : NumberInt(0)
+}
+{ 
+    "_id" : ObjectId("583196ef5fd00723e028b9be"), 
+    "Sonar" : {
+        "right" : 8.769879967556335, 
+        "left" : 5.648621596395969
+    }, 
+    "Servo" : NumberInt(155), 
+    "Position" : {
+        "z" : -1.4530560891143978, 
+        "x" : 0.4762643079739064
+    }, 
+    "Timestamp" : ISODate("2016-11-20T12:28:31.352+0000"), 
+    "__v" : NumberInt(0)
+}
+{ 
+    "_id" : ObjectId("583196ef5fd00723e028b9bf"), 
+    "Sonar" : {
+        "right" : 8.859710534801707, 
+        "left" : 5.378390908706933
+    }, 
+    "Servo" : NumberInt(160), 
+    "Position" : {
+        "z" : -1.217436961364001, 
+        "x" : 0.743278609123081
+    }, 
+    "Timestamp" : ISODate("2016-11-20T12:28:31.653+0000"), 
+    "__v" : NumberInt(0)
+}
+{ 
+    "_id" : ObjectId("583196ef5fd00723e028b9c0"), 
+    "Sonar" : {
+        "right" : 9.784100376302376, 
+        "left" : 5.4691128972917795
+    }, 
+    "Servo" : NumberInt(165), 
+    "Position" : {
+        "z" : -1.0157169729936868, 
+        "x" : 0.39187094499357045
+    }, 
+    "Timestamp" : ISODate("2016-11-20T12:28:31.954+0000"), 
+    "__v" : NumberInt(0)
+}
+{ 
+    "_id" : ObjectId("583196f05fd00723e028b9c1"), 
+    "Sonar" : {
+        "right" : 9.73938996437937, 
+        "left" : 6.215134089929052
+    }, 
+    "Servo" : NumberInt(170), 
+    "Position" : {
+        "z" : -1.3124955894891173, 
+        "x" : 0.2530281797517091
+    }, 
+    "Timestamp" : ISODate("2016-11-20T12:28:32.256+0000"), 
+    "__v" : NumberInt(0)
+}
+{ 
+    "_id" : ObjectId("583196f05fd00723e028b9c2"), 
+    "Sonar" : {
+        "right" : 9.45317666057963, 
+        "left" : 6.62433069339022
+    }, 
+    "Servo" : NumberInt(175), 
+    "Position" : {
+        "z" : -1.4066686471924186, 
+        "x" : 0.3008251420687884
+    }, 
+    "Timestamp" : ISODate("2016-11-20T12:28:32.558+0000"), 
+    "__v" : NumberInt(0)
+}
+{ 
+    "_id" : ObjectId("583196f05fd00723e028b9c3"), 
+    "Sonar" : {
+        "right" : 10.466404919861816, 
+        "left" : 7.054386799689382
+    }, 
+    "Servo" : NumberInt(180), 
+    "Position" : {
+        "z" : -1.4862653247546405, 
+        "x" : NumberInt(0)
+    }, 
+    "Timestamp" : ISODate("2016-11-20T12:28:32.861+0000"), 
+    "__v" : NumberInt(0)
+}
+{ 
+    "_id" : ObjectId("583196f15fd00723e028b9c4"), 
+    "Sonar" : {
+        "right" : 9.54323336982634, 
+        "left" : 8.336678649066016
+    }, 
+    "Servo" : NumberInt(185), 
+    "Position" : {
+        "z" : -1.6002170518040657, 
+        "x" : 0.08878353633917868
+    }, 
+    "Timestamp" : ISODate("2016-11-20T12:28:33.162+0000"), 
+    "__v" : NumberInt(0)
+}
+{ 
+    "_id" : ObjectId("583196f15fd00723e028b9c5"), 
+    "Sonar" : {
+        "right" : 9.270911047700793, 
+        "left" : 8.316628204891458
+    }, 
+    "Servo" : NumberInt(190), 
+    "Position" : {
+        "z" : -1.6025638207793236, 
+        "x" : 0.4223067855928093
+    }, 
+    "Timestamp" : ISODate("2016-11-20T12:28:33.461+0000"), 
+    "__v" : NumberInt(0)
+}
+{ 
+    "_id" : ObjectId("583196f15fd00723e028b9c6"), 
+    "Sonar" : {
+        "right" : 9.25477116194088, 
+        "left" : 7.882273904397152
+    }, 
+    "Servo" : NumberInt(195), 
+    "Position" : {
+        "z" : -1.3359723608009517, 
+        "x" : 0.9170759303960949
+    }, 
+    "Timestamp" : ISODate("2016-11-20T12:28:33.763+0000"), 
+    "__v" : NumberInt(0)
+}
+{ 
+    "_id" : ObjectId("583196f25fd00723e028b9c7"), 
+    "Sonar" : {
+        "right" : 10.574172071181238, 
+        "left" : 6.574354956042953
+    }, 
+    "Servo" : NumberInt(200), 
+    "Position" : {
+        "z" : -1.5630323973018676, 
+        "x" : 0.9073476393241435
+    }, 
+    "Timestamp" : ISODate("2016-11-20T12:28:34.064+0000"), 
+    "__v" : NumberInt(0)
+}
+{ 
+    "_id" : ObjectId("583196f25fd00723e028b9c8"), 
+    "Sonar" : {
+        "right" : 11.63228853023611, 
+        "left" : 6.680683816084638
+    }, 
+    "Servo" : NumberInt(205), 
+    "Position" : {
+        "z" : -1.8648513052612543, 
+        "x" : 1.0212288142647594
+    }, 
+    "Timestamp" : ISODate("2016-11-20T12:28:34.365+0000"), 
+    "__v" : NumberInt(0)
+}
+{ 
+    "_id" : ObjectId("583196f25fd00723e028b9c9"), 
+    "Sonar" : {
+        "right" : 12.5515950670233, 
+        "left" : 5.7802403413224965
+    }, 
+    "Servo" : NumberInt(210), 
+    "Position" : {
+        "z" : -1.0128461341373622, 
+        "x" : 1.799612494185567
+    }, 
+    "Timestamp" : ISODate("2016-11-20T12:28:34.666+0000"), 
+    "__v" : NumberInt(0)
+}
+{ 
+    "_id" : ObjectId("583196f25fd00723e028b9ca"), 
+    "Sonar" : {
+        "right" : 12.123415085254237, 
+        "left" : 5.321489840047434
+    }, 
+    "Servo" : NumberInt(215), 
+    "Position" : {
+        "z" : -1.0508755140472203, 
+        "x" : 0.8243019948713481
+    }, 
+    "Timestamp" : ISODate("2016-11-20T12:28:34.967+0000"), 
+    "__v" : NumberInt(0)
+}
+{ 
+    "_id" : ObjectId("583196f35fd00723e028b9cb"), 
+    "Sonar" : {
+        "right" : 12.582759689539671, 
+        "left" : 5.347895451937802
+    }, 
+    "Servo" : NumberInt(220), 
+    "Position" : {
+        "z" : -1.214837574865669, 
+        "x" : 0.6497899941168725
+    }, 
+    "Timestamp" : ISODate("2016-11-20T12:28:35.270+0000"), 
+    "__v" : NumberInt(0)
+}
+{ 
+    "_id" : ObjectId("583196f35fd00723e028b9cc"), 
+    "Sonar" : {
+        "right" : 11.94246333220508, 
+        "left" : 6.321704659960233
+    }, 
+    "Servo" : NumberInt(225), 
+    "Position" : {
+        "z" : -1.409778400324285, 
+        "x" : 0.6090014011133462
+    }, 
+    "Timestamp" : ISODate("2016-11-20T12:28:35.570+0000"), 
+    "__v" : NumberInt(0)
+}
+{ 
+    "_id" : ObjectId("583196f35fd00723e028b9cd"), 
+    "Sonar" : {
+        "right" : 11.509678296511993, 
+        "left" : 5.653906954219565
+    }, 
+    "Servo" : NumberInt(230), 
+    "Position" : {
+        "z" : -0.8868430573493242, 
+        "x" : 0.3587322630919516
+    }, 
+    "Timestamp" : ISODate("2016-11-20T12:28:35.872+0000"), 
+    "__v" : NumberInt(0)
+}
+{ 
+    "_id" : ObjectId("583196f45fd00723e028b9ce"), 
+    "Sonar" : {
+        "right" : 10.854728905600496, 
+        "left" : 6.658341972972266
+    }, 
+    "Servo" : NumberInt(235), 
+    "Position" : {
+        "z" : -1.076940581900999, 
+        "x" : NumberInt(0)
+    }, 
+    "Timestamp" : ISODate("2016-11-20T12:28:36.174+0000"), 
+    "__v" : NumberInt(0)
+}
+{ 
+    "_id" : ObjectId("583196f45fd00723e028b9cf"), 
+    "Sonar" : {
+        "right" : 10.111231817281805, 
+        "left" : 7.5817283522337675
+    }, 
+    "Servo" : NumberInt(240), 
+    "Position" : {
+        "z" : -0.31839940743520856, 
+        "x" : NumberInt(0)
+    }, 
+    "Timestamp" : ISODate("2016-11-20T12:28:36.476+0000"), 
+    "__v" : NumberInt(0)
+}
+{ 
+    "_id" : ObjectId("583196f45fd00723e028b9d0"), 
+    "Sonar" : {
+        "right" : 10.307537687243894, 
+        "left" : 7.144242332084104
+    }, 
+    "Servo" : NumberInt(245), 
+    "Position" : {
+        "z" : -0.4281491069123149, 
+        "x" : 0.10362347890622914
+    }, 
+    "Timestamp" : ISODate("2016-11-20T12:28:36.779+0000"), 
+    "__v" : NumberInt(0)
+}
+{ 
+    "_id" : ObjectId("583196f55fd00723e028b9d1"), 
+    "Sonar" : {
+        "right" : 11.399930415907875, 
+        "left" : 7.317417079466395
+    }, 
+    "Servo" : NumberInt(250), 
+    "Position" : {
+        "z" : -0.497954425169155, 
+        "x" : 0.05183157999999821
+    }, 
+    "Timestamp" : ISODate("2016-11-20T12:28:37.079+0000"), 
+    "__v" : NumberInt(0)
+}
+{ 
+    "_id" : ObjectId("583196f55fd00723e028b9d2"), 
+    "Sonar" : {
+        "right" : 10.869488775264472, 
+        "left" : 7.915117570548318
+    }, 
+    "Servo" : NumberInt(255), 
+    "Position" : {
+        "z" : 0.2587177383247763, 
+        "x" : 0.46840630657970905
+    }, 
+    "Timestamp" : ISODate("2016-11-20T12:28:37.381+0000"), 
+    "__v" : NumberInt(0)
+}
+{ 
+    "_id" : ObjectId("583196f55fd00723e028b9d3"), 
+    "Sonar" : {
+        "right" : 9.976050932891667, 
+        "left" : 8.568557468708605
+    }, 
+    "Servo" : NumberInt(260), 
+    "Position" : {
+        "z" : 0.24243317591026425, 
+        "x" : 1.0174383190460503
+    }, 
+    "Timestamp" : ISODate("2016-11-20T12:28:37.684+0000"), 
+    "__v" : NumberInt(0)
+}
+{ 
+    "_id" : ObjectId("583196f55fd00723e028b9d4"), 
+    "Sonar" : {
+        "right" : 10.94903206685558, 
+        "left" : 7.621578651014715
+    }, 
+    "Servo" : NumberInt(265), 
+    "Position" : {
+        "z" : 0.7296474650502205, 
+        "x" : 0.3791318475268781
+    }, 
+    "Timestamp" : ISODate("2016-11-20T12:28:37.986+0000"), 
+    "__v" : NumberInt(0)
+}
+{ 
+    "_id" : ObjectId("583196f65fd00723e028b9d5"), 
+    "Sonar" : {
+        "right" : 12.057227851706557, 
+        "left" : 7.3844705146038905
+    }, 
+    "Servo" : NumberInt(270), 
+    "Position" : {
+        "z" : 0.516328337136656, 
+        "x" : NumberInt(0)
+    }, 
+    "Timestamp" : ISODate("2016-11-20T12:28:38.287+0000"), 
+    "__v" : NumberInt(0)
+}
+{ 
+    "_id" : ObjectId("583196f65fd00723e028b9d6"), 
+    "Sonar" : {
+        "right" : 11.03891640191432, 
+        "left" : 7.428306186920963
+    }, 
+    "Servo" : NumberInt(275), 
+    "Position" : {
+        "z" : 0.6703027128241956, 
+        "x" : 0.005622578784823418
+    }, 
+    "Timestamp" : ISODate("2016-11-20T12:28:38.589+0000"), 
+    "__v" : NumberInt(0)
+}
+{ 
+    "_id" : ObjectId("583196f65fd00723e028b9d7"), 
+    "Sonar" : {
+        "right" : 11.875563584500924, 
+        "left" : 7.5243887605611235
+    }, 
+    "Servo" : NumberInt(280), 
+    "Position" : {
+        "z" : 0.7394582622218877, 
+        "x" : NumberInt(0)
+    }, 
+    "Timestamp" : ISODate("2016-11-20T12:28:38.889+0000"), 
+    "__v" : NumberInt(0)
+}
+{ 
+    "_id" : ObjectId("583196f75fd00723e028b9d8"), 
+    "Sonar" : {
+        "right" : 11.636106169666164, 
+        "left" : 7.938981464598328
+    }, 
+    "Servo" : NumberInt(285), 
+    "Position" : {
+        "z" : 0.36866413964889944, 
+        "x" : NumberInt(0)
+    }, 
+    "Timestamp" : ISODate("2016-11-20T12:28:39.191+0000"), 
+    "__v" : NumberInt(0)
+}
+{ 
+    "_id" : ObjectId("583196f75fd00723e028b9d9"), 
+    "Sonar" : {
+        "right" : 11.49293691071216, 
+        "left" : 6.978329541278072
+    }, 
+    "Servo" : NumberInt(290), 
+    "Position" : {
+        "z" : -0.025217884918674827, 
+        "x" : 0.48805132252164185
+    }, 
+    "Timestamp" : ISODate("2016-11-20T12:28:39.495+0000"), 
+    "__v" : NumberInt(0)
+}
+{ 
+    "_id" : ObjectId("583196f75fd00723e028b9da"), 
+    "Sonar" : {
+        "right" : 11.522711844765581, 
+        "left" : 6.5651924919802696
+    }, 
+    "Servo" : NumberInt(295), 
+    "Position" : {
+        "z" : 0.6971601736731827, 
+        "x" : 0.4314788687042892
+    }, 
+    "Timestamp" : ISODate("2016-11-20T12:28:39.797+0000"), 
+    "__v" : NumberInt(0)
+}
+{ 
+    "_id" : ObjectId("583196f85fd00723e028b9db"), 
+    "Sonar" : {
+        "right" : 11.671516426606104, 
+        "left" : 5.530002189334482
+    }, 
+    "Servo" : NumberInt(300), 
+    "Position" : {
+        "z" : 0.7721702600829303, 
+        "x" : 0.9380223152693361
+    }, 
+    "Timestamp" : ISODate("2016-11-20T12:28:40.107+0000"), 
+    "__v" : NumberInt(0)
+}
+{ 
+    "_id" : ObjectId("583196f85fd00723e028b9dc"), 
+    "Sonar" : {
+        "right" : 11.691246851813048, 
+        "left" : 5.7003325005061924
+    }, 
+    "Servo" : NumberInt(305), 
+    "Position" : {
+        "z" : 0.9574257270433009, 
+        "x" : 0.88223163690418
+    }, 
+    "Timestamp" : ISODate("2016-11-20T12:28:40.416+0000"), 
+    "__v" : NumberInt(0)
+}
+{ 
+    "_id" : ObjectId("583196f85fd00723e028b9dd"), 
+    "Sonar" : {
+        "right" : 11.995209949323907, 
+        "left" : 6.16801040340215
+    }, 
+    "Servo" : NumberInt(310), 
+    "Position" : {
+        "z" : 0.33393182954750955, 
+        "x" : 0.672456668689847
+    }, 
+    "Timestamp" : ISODate("2016-11-20T12:28:40.718+0000"), 
+    "__v" : NumberInt(0)
+}
+{ 
+    "_id" : ObjectId("583196f95fd00723e028b9de"), 
+    "Sonar" : {
+        "right" : 12.64524842123501, 
+        "left" : 6.530476448708214
+    }, 
+    "Servo" : NumberInt(315), 
+    "Position" : {
+        "z" : 0.5119357143994421, 
+        "x" : 0.928208059631288
+    }, 
+    "Timestamp" : ISODate("2016-11-20T12:28:41.021+0000"), 
+    "__v" : NumberInt(0)
+}
+{ 
+    "_id" : ObjectId("583196f95fd00723e028b9df"), 
+    "Sonar" : {
+        "right" : 12.398441607365385, 
+        "left" : 5.437055865069851
+    }, 
+    "Servo" : NumberInt(320), 
+    "Position" : {
+        "z" : -0.03459679428488016, 
+        "x" : 1.3307233974337578
+    }, 
+    "Timestamp" : ISODate("2016-11-20T12:28:41.328+0000"), 
+    "__v" : NumberInt(0)
+}
+{ 
+    "_id" : ObjectId("583196f95fd00723e028b9e0"), 
+    "Sonar" : {
+        "right" : 11.171809747233056, 
+        "left" : 4.533650865894742
+    }, 
+    "Servo" : NumberInt(325), 
+    "Position" : {
+        "z" : -0.38165423669852316, 
+        "x" : 1.5433258407283574
+    }, 
+    "Timestamp" : ISODate("2016-11-20T12:28:41.631+0000"), 
+    "__v" : NumberInt(0)
+}
+{ 
+    "_id" : ObjectId("583196f95fd00723e028b9e1"), 
+    "Sonar" : {
+        "right" : 11.173093855148181, 
+        "left" : 5.084405179601163
+    }, 
+    "Servo" : NumberInt(330), 
+    "Position" : {
+        "z" : -0.8089418823365122, 
+        "x" : 1.5359835478011519
+    }, 
+    "Timestamp" : ISODate("2016-11-20T12:28:41.933+0000"), 
+    "__v" : NumberInt(0)
+}
+{ 
+    "_id" : ObjectId("583196fa5fd00723e028b9e2"), 
+    "Sonar" : {
+        "right" : 10.55264686467126, 
+        "left" : 5.991053046658635
+    }, 
+    "Servo" : NumberInt(335), 
+    "Position" : {
+        "z" : -0.417426724685356, 
+        "x" : 1.3659349251538515
+    }, 
+    "Timestamp" : ISODate("2016-11-20T12:28:42.233+0000"), 
+    "__v" : NumberInt(0)
+}
+{ 
+    "_id" : ObjectId("583196fa5fd00723e028b9e3"), 
+    "Sonar" : {
+        "right" : 10.136601120699197, 
+        "left" : 5.8846189242322
+    }, 
+    "Servo" : NumberInt(340), 
+    "Position" : {
+        "z" : -0.7972731853369623, 
+        "x" : 2.0829012079630047
+    }, 
+    "Timestamp" : ISODate("2016-11-20T12:28:42.536+0000"), 
+    "__v" : NumberInt(0)
+}
+{ 
+    "_id" : ObjectId("583196fa5fd00723e028b9e4"), 
+    "Sonar" : {
+        "right" : 10.968419003416784, 
+        "left" : 6.04273750865832
+    }, 
+    "Servo" : NumberInt(345), 
+    "Position" : {
+        "z" : -0.709643475478515, 
+        "x" : 2.2083508311770856
+    }, 
+    "Timestamp" : ISODate("2016-11-20T12:28:42.837+0000"), 
+    "__v" : NumberInt(0)
+}
+{ 
+    "_id" : ObjectId("583196fb5fd00723e028b9e5"), 
+    "Sonar" : {
+        "right" : 10.382476187194698, 
+        "left" : 6.286399853997864
+    }, 
+    "Servo" : NumberInt(350), 
+    "Position" : {
+        "z" : -1.5030068112537265, 
+        "x" : 2.1205297119449824
+    }, 
+    "Timestamp" : ISODate("2016-11-20T12:28:43.139+0000"), 
+    "__v" : NumberInt(0)
+}
+{ 
+    "_id" : ObjectId("583196fb5fd00723e028b9e6"), 
+    "Sonar" : {
+        "right" : 9.55788271012716, 
+        "left" : 7.4529329899232835
+    }, 
+    "Servo" : NumberInt(355), 
+    "Position" : {
+        "z" : -1.26582868443802, 
+        "x" : 1.4562265432905406
+    }, 
+    "Timestamp" : ISODate("2016-11-20T12:28:43.440+0000"), 
+    "__v" : NumberInt(0)
+}
+{ 
+    "_id" : ObjectId("583196fb5fd00723e028b9e7"), 
+    "Sonar" : {
+        "right" : 9.10084529418964, 
+        "left" : 6.672184492577799
+    }, 
+    "Servo" : NumberInt(360), 
+    "Position" : {
+        "z" : -1.6815782077610493, 
+        "x" : 1.247042699251324
+    }, 
+    "Timestamp" : ISODate("2016-11-20T12:28:43.740+0000"), 
+    "__v" : NumberInt(0)
+}
+{ 
+    "_id" : ObjectId("583196fc5fd00723e028b9e8"), 
+    "Sonar" : {
+        "right" : 9.144964727107435, 
+        "left" : 7.291084982804023
+    }, 
+    "Servo" : NumberInt(0), 
+    "Position" : {
+        "z" : -2.157766150077805, 
+        "x" : 1.0955851052422076
+    }, 
+    "Timestamp" : ISODate("2016-11-20T12:28:44.042+0000"), 
+    "__v" : NumberInt(0)
+}
+{ 
+    "_id" : ObjectId("583196fc5fd00723e028b9e9"), 
+    "Sonar" : {
+        "right" : 8.409768419107422, 
+        "left" : 7.5647249076282606
+    }, 
+    "Servo" : NumberInt(5), 
+    "Position" : {
+        "z" : -1.8925998860504478, 
+        "x" : 1.0279911325778812
+    }, 
+    "Timestamp" : ISODate("2016-11-20T12:28:44.344+0000"), 
+    "__v" : NumberInt(0)
+}
+{ 
+    "_id" : ObjectId("583196fc5fd00723e028b9ea"), 
+    "Sonar" : {
+        "right" : 8.764984307810664, 
+        "left" : 7.388550607836805
+    }, 
+    "Servo" : NumberInt(10), 
+    "Position" : {
+        "z" : -1.331882068887353, 
+        "x" : 0.444887938676402
+    }, 
+    "Timestamp" : ISODate("2016-11-20T12:28:44.647+0000"), 
+    "__v" : NumberInt(0)
+}
+{ 
+    "_id" : ObjectId("583196fc5fd00723e028b9eb"), 
+    "Sonar" : {
+        "right" : 8.25576314155478, 
+        "left" : 6.991545323980972
+    }, 
+    "Servo" : NumberInt(15), 
+    "Position" : {
+        "z" : -1.861868309788406, 
+        "x" : 0.6149348085746169
+    }, 
+    "Timestamp" : ISODate("2016-11-20T12:28:44.949+0000"), 
+    "__v" : NumberInt(0)
+}
+{ 
+    "_id" : ObjectId("583196fd5fd00723e028b9ec"), 
+    "Sonar" : {
+        "right" : 8.189419342787005, 
+        "left" : 6.1317266169935465
+    }, 
+    "Servo" : NumberInt(20), 
+    "Position" : {
+        "z" : -2.01337081566453, 
+        "x" : 0.716370623325929
+    }, 
+    "Timestamp" : ISODate("2016-11-20T12:28:45.251+0000"), 
+    "__v" : NumberInt(0)
+}
+{ 
+    "_id" : ObjectId("583196fd5fd00723e028b9ed"), 
+    "Sonar" : {
+        "right" : 8.408000320545398, 
+        "left" : 6.562574486946687
+    }, 
+    "Servo" : NumberInt(25), 
+    "Position" : {
+        "z" : -2.6009401923511177, 
+        "x" : 0.9396555433049798
+    }, 
+    "Timestamp" : ISODate("2016-11-20T12:28:45.553+0000"), 
+    "__v" : NumberInt(0)
+}
+{ 
+    "_id" : ObjectId("583196fd5fd00723e028b9ee"), 
+    "Sonar" : {
+        "right" : 7.835558184073307, 
+        "left" : 6.173114113858901
+    }, 
+    "Servo" : NumberInt(30), 
+    "Position" : {
+        "z" : -2.54987803241238, 
+        "x" : 0.2522663890849799
+    }, 
+    "Timestamp" : ISODate("2016-11-20T12:28:45.855+0000"), 
+    "__v" : NumberInt(0)
+}
+{ 
+    "_id" : ObjectId("583196fe5fd00723e028b9ef"), 
+    "Sonar" : {
+        "right" : 8.188321223016828, 
+        "left" : 5.981009714421816
+    }, 
+    "Servo" : NumberInt(35), 
+    "Position" : {
+        "z" : -2.254592148354277, 
+        "x" : 1.0066138862166554
+    }, 
+    "Timestamp" : ISODate("2016-11-20T12:28:46.157+0000"), 
+    "__v" : NumberInt(0)
+}
+{ 
+    "_id" : ObjectId("583196fe5fd00723e028b9f0"), 
+    "Sonar" : {
+        "right" : 7.285780247184448, 
+        "left" : 5.283383794710971
+    }, 
+    "Servo" : NumberInt(40), 
+    "Position" : {
+        "z" : -2.880734314909205, 
+        "x" : 0.6029640564229339
+    }, 
+    "Timestamp" : ISODate("2016-11-20T12:28:46.457+0000"), 
+    "__v" : NumberInt(0)
+}
+{ 
+    "_id" : ObjectId("583196fe5fd00723e028b9f1"), 
+    "Sonar" : {
+        "right" : 7.244655906455591, 
+        "left" : 5.5034904793137684
+    }, 
+    "Servo" : NumberInt(45), 
+    "Position" : {
+        "z" : -3.1320624703075737, 
+        "x" : 1.0449491201434284
+    }, 
+    "Timestamp" : ISODate("2016-11-20T12:28:46.759+0000"), 
+    "__v" : NumberInt(0)
+}
+{ 
+    "_id" : ObjectId("583196ff5fd00723e028b9f2"), 
+    "Sonar" : {
+        "right" : 7.601648765965365, 
+        "left" : 5.247872540378012
+    }, 
+    "Servo" : NumberInt(50), 
+    "Position" : {
+        "z" : -3.373201983049512, 
+        "x" : 1.7437728352379054
+    }, 
+    "Timestamp" : ISODate("2016-11-20T12:28:47.061+0000"), 
+    "__v" : NumberInt(0)
+}
+{ 
+    "_id" : ObjectId("583196ff5fd00723e028b9f3"), 
+    "Sonar" : {
+        "right" : 7.504937481833622, 
+        "left" : 5.8846881908830255
+    }, 
+    "Servo" : NumberInt(55), 
+    "Position" : {
+        "z" : -3.386933029163629, 
+        "x" : 1.9675291723106056
+    }, 
+    "Timestamp" : ISODate("2016-11-20T12:28:47.364+0000"), 
+    "__v" : NumberInt(0)
+}
+{ 
+    "_id" : ObjectId("583196ff5fd00723e028b9f4"), 
+    "Sonar" : {
+        "right" : 7.180756191024557, 
+        "left" : 4.454646136378869
+    }, 
+    "Servo" : NumberInt(60), 
+    "Position" : {
+        "z" : -4.2545922512654215, 
+        "x" : 2.5473527358844876
+    }, 
+    "Timestamp" : ISODate("2016-11-20T12:28:47.666+0000"), 
+    "__v" : NumberInt(0)
+}
+{ 
+    "_id" : ObjectId("583196ff5fd00723e028b9f5"), 
+    "Sonar" : {
+        "right" : 6.4554947457509115, 
+        "left" : 5.405747328069992
+    }, 
+    "Servo" : NumberInt(65), 
+    "Position" : {
+        "z" : -4.650200555799529, 
+        "x" : 2.4893863059114665
+    }, 
+    "Timestamp" : ISODate("2016-11-20T12:28:47.967+0000"), 
+    "__v" : NumberInt(0)
+}
+{ 
+    "_id" : ObjectId("583197005fd00723e028b9f6"), 
+    "Sonar" : {
+        "right" : 7.562191093340516, 
+        "left" : 6.095564103452489
+    }, 
+    "Servo" : NumberInt(70), 
+    "Position" : {
+        "z" : -4.21796296001412, 
+        "x" : 2.3511933186091483
+    }, 
+    "Timestamp" : ISODate("2016-11-20T12:28:48.268+0000"), 
+    "__v" : NumberInt(0)
+}
+{ 
+    "_id" : ObjectId("583197005fd00723e028b9f7"), 
+    "Sonar" : {
+        "right" : 8.346412285114639, 
+        "left" : 6.1944852421293035
+    }, 
+    "Servo" : NumberInt(75), 
+    "Position" : {
+        "z" : -4.2937275422737, 
+        "x" : 1.8814255390316248
+    }, 
+    "Timestamp" : ISODate("2016-11-20T12:28:48.569+0000"), 
+    "__v" : NumberInt(0)
+}
+{ 
+    "_id" : ObjectId("583197005fd00723e028b9f8"), 
+    "Sonar" : {
+        "right" : 8.907937636016868, 
+        "left" : 7.122111573582515
+    }, 
+    "Servo" : NumberInt(80), 
+    "Position" : {
+        "z" : -3.7166441997978836, 
+        "x" : 2.6279197419062257
+    }, 
+    "Timestamp" : ISODate("2016-11-20T12:28:48.869+0000"), 
+    "__v" : NumberInt(0)
+}
+{ 
+    "_id" : ObjectId("583197015fd00723e028b9f9"), 
+    "Sonar" : {
+        "right" : 9.420508413342759, 
+        "left" : 6.702610218548216
+    }, 
+    "Servo" : NumberInt(85), 
+    "Position" : {
+        "z" : -2.8566160942427814, 
+        "x" : 2.440630505559966
+    }, 
+    "Timestamp" : ISODate("2016-11-20T12:28:49.171+0000"), 
+    "__v" : NumberInt(0)
+}
+{ 
+    "_id" : ObjectId("583197015fd00723e028b9fa"), 
+    "Sonar" : {
+        "right" : 8.459689549752511, 
+        "left" : 6.2575485948473215
+    }, 
+    "Servo" : NumberInt(90), 
+    "Position" : {
+        "z" : -2.2094390785787255, 
+        "x" : 2.243094712961465
+    }, 
+    "Timestamp" : ISODate("2016-11-20T12:28:49.473+0000"), 
+    "__v" : NumberInt(0)
+}
+{ 
+    "_id" : ObjectId("583197015fd00723e028b9fb"), 
+    "Sonar" : {
+        "right" : 7.789208105998114, 
+        "left" : 6.240913868765347
+    }, 
+    "Servo" : NumberInt(95), 
+    "Position" : {
+        "z" : -2.5363141775596887, 
+        "x" : 2.6178051186725497
+    }, 
+    "Timestamp" : ISODate("2016-11-20T12:28:49.775+0000"), 
+    "__v" : NumberInt(0)
+}
+{ 
+    "_id" : ObjectId("583197025fd00723e028b9fc"), 
+    "Sonar" : {
+        "right" : 6.84378466499038, 
+        "left" : 6.494717720081098
+    }, 
+    "Servo" : NumberInt(100), 
+    "Position" : {
+        "z" : -2.437849375186488, 
+        "x" : 1.8770233858376741
+    }, 
+    "Timestamp" : ISODate("2016-11-20T12:28:50.078+0000"), 
+    "__v" : NumberInt(0)
+}
+{ 
+    "_id" : ObjectId("583197025fd00723e028b9fd"), 
+    "Sonar" : {
+        "right" : 6.6833625104045495, 
+        "left" : 5.9165138602256775
+    }, 
+    "Servo" : NumberInt(105), 
+    "Position" : {
+        "z" : -2.917107298504561, 
+        "x" : 2.3708656628150493
+    }, 
+    "Timestamp" : ISODate("2016-11-20T12:28:50.380+0000"), 
+    "__v" : NumberInt(0)
+}
+{ 
+    "_id" : ObjectId("583197025fd00723e028b9fe"), 
+    "Sonar" : {
+        "right" : 5.5350308696506545, 
+        "left" : 5.383666594512761
+    }, 
+    "Servo" : NumberInt(110), 
+    "Position" : {
+        "z" : -2.95467208721675, 
+        "x" : 2.237814912106842
+    }, 
+    "Timestamp" : ISODate("2016-11-20T12:28:50.680+0000"), 
+    "__v" : NumberInt(0)
+}
+{ 
+    "_id" : ObjectId("583197025fd00723e028b9ff"), 
+    "Sonar" : {
+        "right" : 6.227206603158265, 
+        "left" : 4.822303157881834
+    }, 
+    "Servo" : NumberInt(115), 
+    "Position" : {
+        "z" : -3.061208395054564, 
+        "x" : 2.3464979813434184
+    }, 
+    "Timestamp" : ISODate("2016-11-20T12:28:50.983+0000"), 
+    "__v" : NumberInt(0)
+}
+{ 
+    "_id" : ObjectId("583197035fd00723e028ba00"), 
+    "Sonar" : {
+        "right" : 6.178152603446506, 
+        "left" : 5.278951980406418
+    }, 
+    "Servo" : NumberInt(120), 
+    "Position" : {
+        "z" : -2.274138811044395, 
+        "x" : 2.3828823096118867
+    }, 
+    "Timestamp" : ISODate("2016-11-20T12:28:51.284+0000"), 
+    "__v" : NumberInt(0)
+}
+{ 
+    "_id" : ObjectId("583197035fd00723e028ba01"), 
+    "Sonar" : {
+        "right" : 5.492576095974073, 
+        "left" : 4.311669210670516
+    }, 
+    "Servo" : NumberInt(125), 
+    "Position" : {
+        "z" : -2.915576086146757, 
+        "x" : 2.4297794699668884
+    }, 
+    "Timestamp" : ISODate("2016-11-20T12:28:51.584+0000"), 
+    "__v" : NumberInt(0)
+}
+{ 
+    "_id" : ObjectId("583197035fd00723e028ba02"), 
+    "Sonar" : {
+        "right" : 6.269595947000198, 
+        "left" : 4.226958441897295
+    }, 
+    "Servo" : NumberInt(130), 
+    "Position" : {
+        "z" : -3.0355476890690625, 
+        "x" : 2.897242802195251
+    }, 
+    "Timestamp" : ISODate("2016-11-20T12:28:51.886+0000"), 
+    "__v" : NumberInt(0)
+}
+{ 
+    "_id" : ObjectId("583197045fd00723e028ba03"), 
+    "Sonar" : {
+        "right" : 6.267648622393608, 
+        "left" : 4.548188610933721
+    }, 
+    "Servo" : NumberInt(135), 
+    "Position" : {
+        "z" : -3.4268957800231874, 
+        "x" : 2.548502213554457
+    }, 
+    "Timestamp" : ISODate("2016-11-20T12:28:52.188+0000"), 
+    "__v" : NumberInt(0)
+}
+{ 
+    "_id" : ObjectId("583197045fd00723e028ba04"), 
+    "Sonar" : {
+        "right" : 5.3080160055542365, 
+        "left" : 4.986042536213063
+    }, 
+    "Servo" : NumberInt(140), 
+    "Position" : {
+        "z" : -3.117961908923462, 
+        "x" : 2.612092002062127
+    }, 
+    "Timestamp" : ISODate("2016-11-20T12:28:52.490+0000"), 
+    "__v" : NumberInt(0)
+}
+{ 
+    "_id" : ObjectId("583197045fd00723e028ba05"), 
+    "Sonar" : {
+        "right" : 5.915964938234538, 
+        "left" : 4.559842779417522
+    }, 
+    "Servo" : NumberInt(145), 
+    "Position" : {
+        "z" : -3.726455587660894, 
+        "x" : 2.412934511899948
+    }, 
+    "Timestamp" : ISODate("2016-11-20T12:28:52.791+0000"), 
+    "__v" : NumberInt(0)
+}
+{ 
+    "_id" : ObjectId("583197055fd00723e028ba06"), 
+    "Sonar" : {
+        "right" : 5.277647608658299, 
+        "left" : 5.915243057534099
+    }, 
+    "Servo" : NumberInt(150), 
+    "Position" : {
+        "z" : -3.739577481523156, 
+        "x" : 2.8945866806898266
+    }, 
+    "Timestamp" : ISODate("2016-11-20T12:28:53.092+0000"), 
+    "__v" : NumberInt(0)
+}
+{ 
+    "_id" : ObjectId("583197055fd00723e028ba07"), 
+    "Sonar" : {
+        "right" : 5.234417870407924, 
+        "left" : 7.277903804788366
+    }, 
+    "Servo" : NumberInt(155), 
+    "Position" : {
+        "z" : -3.912279673386365, 
+        "x" : 3.6532020757440478
+    }, 
+    "Timestamp" : ISODate("2016-11-20T12:28:53.394+0000"), 
+    "__v" : NumberInt(0)
+}
+{ 
+    "_id" : ObjectId("583197055fd00723e028ba08"), 
+    "Sonar" : {
+        "right" : 5.319956630119123, 
+        "left" : 6.562065428472124
+    }, 
+    "Servo" : NumberInt(160), 
+    "Position" : {
+        "z" : -3.6049791928380728, 
+        "x" : 4.302380274515599
+    }, 
+    "Timestamp" : ISODate("2016-11-20T12:28:53.697+0000"), 
+    "__v" : NumberInt(0)
+}
+{ 
+    "_id" : ObjectId("583197055fd00723e028ba09"), 
+    "Sonar" : {
+        "right" : 4.813558845431544, 
+        "left" : 5.996676159207709
+    }, 
+    "Servo" : NumberInt(165), 
+    "Position" : {
+        "z" : -3.6781146419234574, 
+        "x" : 4.136509594740346
+    }, 
+    "Timestamp" : ISODate("2016-11-20T12:28:53.998+0000"), 
+    "__v" : NumberInt(0)
+}
+{ 
+    "_id" : ObjectId("583197065fd00723e028ba0a"), 
+    "Sonar" : {
+        "right" : 5.932653129682876, 
+        "left" : 5.2769921402214095
+    }, 
+    "Servo" : NumberInt(170), 
+    "Position" : {
+        "z" : -2.9503374961204827, 
+        "x" : 3.832498691510409
+    }, 
+    "Timestamp" : ISODate("2016-11-20T12:28:54.299+0000"), 
+    "__v" : NumberInt(0)
+}
